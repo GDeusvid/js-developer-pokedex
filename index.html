@@ -1,46 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Font Roboto -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Julee&family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Nosso CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/pokedex.css">
-</head>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/poke-detail.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-<body>
+</head> 
+<body> 
+    
     <section class="content">
-        <h1>Pokedex</h1>
-
-        <ol id="pokemonList" class="pokemons">
-            <!-- ..... Pokemons here ..... -->
-        </ol>
-
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
+        <div class="titulo">
+           <h1 >P</h1> 
+           <img src="./images/pokebolavermelho.png" alt="">
+           <h1 >kédex</h1> 
+           
         </div>
+       
+       <div class="paginationtop">
+        <button id="load1generation" type="button">1° Geração</button>
+        <button id="load2generation" type="button">2° Geração</button>
+        <button id="load3generation" type="button">3° Geração</button>
+        <button id="load4generation" type="button">4° Geração</button>
+        <button id="load5generation" type="button">5° Geração</button>
+        <button id="load6generation" type="button">6° Geração</button>
+        <button id="load7generation" type="button">7° Geração</button>
+        <button id="load8generation" type="button">8° Geração</button>
+        <button id="load9generation" type="button">9° Geração</button>
+        <button id="loadallgeneration" type="button">Lista Completa</button>
+        
+       </div>
+       <div class="pesquisa">
+        <div class="pesquisanumero ">
+            <input style="width: 6.1rem; height: 1.85rem;" type="number" class="form-control inputnumero" placeholder="Número">
+            <span class="input-group-btn">
+            <button class="botao_pesquisanumero" type="button">Pesquisar</button>
+            </span>
+        </div>
+        <div class="pesquisatexto ">
+            <input style="width: 6.1rem; height: 1.85rem;" type="text" class="form-control inputtexto" placeholder="Nome">
+            <span class="input-group-btn">
+            <button class="botao_pesquisatexto" type="button">Pesquisar</button>
+            </span>
+        </div>
+       </div>
+        
+          
+       <ol id="pokemonList" class="pokemons">
+       
+           <!-- <li class="pokemon">
+            <span class="number">#001</span>
+            <span class="name">Bulbasaur</span>
+            <div class="detail">
+                <ol class="types">
+                    <li class="type">Grass</li>
+                    <li class="type">Poison</li>
+                    
+                </ol>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
+            </div>
+            
+        </li>  -->
+        
+        
+        
+            
+        
+        <!-- .......POKEMONS HERE! ...........-->
+        
+       </ol>
+       <div class="pokemonDetail">
+        <!-- <div class="detailheader">
+            <div class="voltar"> 🠔</div>
+            <div class="nameeNumero">
+              <span class="nameDetail">Bulbasaur</span>
+                <span class="numberDetail">#001</span>  
+            </div>
+            <div class="typesDetaildiv">
+                <ol class="typesDetail">
+                    <li class="typeDetail">Grass</li>
+                    <li class="typeDetail">Poisons</li>
+                </ol>
+                <img class="pokebolapretoebranco" src="./images/pokebolapretoebranco2.png" alt="pokebolapretoebranco">
+                <img class="pokemondesenho" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur">
+                
+            </div>
+            
+        </div>
+            <div class="descricoes">
+                <div class="menu">
+                    <span class="sobre menuSelect">Sobre</span>
+                    <span class="basestats">Base Stats</span>
+                </div>
+                <div class="menu2">
+                    <span class="sobre linhadivisor" style="margin-top: 0;">Sobre</span>
+                    <span class="basestats " style="margin-top: 0;">Base Stats</span>
+                </div>
+                <div class="caracteristicas">
+                    <ul>
+                        <li>Espécie <span>seed</span></li>
+                        <li>Altura <span>seed</span></li>
+                        <li>Peso <span>seed</span></li>
+                        <li>Habilidades <span>seed</span></li>
+                    </ul>
+                    <ul  class="reproducao">
+                        <li style="color: black;">Reprodução</li>
+                    </ul>
+                    <ul>
+                        <li>Género <span><svg style="color: rgb(32, 32, 158);" xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+                            </svg>seed
+                            <span><svg style="color: rgb(168, 18, 18);" xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+                            </svg>seed</span>
+                            </span> </li>
+                        <li>Grupos de ovos <span>seed</span></li>
+                        <li>Ciclo de ovos <span>seed</span></li>
+                        
+                    </ul>
+                </div>
+                <div class="caracteristicas2">
+                    <ul>
+                        <li>Hp <span>50</span></li>
+                        <li>Ataque <span>50</span></li>
+                        <li>Defesa <span>50</span></li>
+                        <li>Esp. Ataque <span>50</span></li>
+                        <li>Esp. Defesa <span>50</span></li>
+                        <li>Velocidade <span>50</span></li>
+                        <li>Total <span>300</span></li>
+                    </ul>
+                    
+                </div>
+                
+            </div> -->
+       </div>
+
+
+
+       <div class="pagination">
+        
+        <button id="loadMoreButton" type="button">Carregar mais...</button>
+       </div>
+        
     </section>
+    <footer id="footer">© 2023 David Gonçalves, Web Dev</footer>
 
-    <!-- Nosso JS -->
-    <script src="/assets/js/pokemon-model.js"></script>
-    <script src="/assets/js/poke-api.js"></script>
-    <script src="/assets/js/main.js"></script>
+
+<!-- Nosso JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="./assets/js/pokemon-pos-details.js"></script>
+<script src="./assets/js/pokemon-models.js"></script>
+<script src="./assets/js/poke-api.js"></script>
+<script src="./assets/js/main.js"></script>
+
 </body>
-
 </html>
